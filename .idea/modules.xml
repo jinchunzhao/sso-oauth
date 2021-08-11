@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot-sso-oauth/springboot-sso-oauth.iml" filepath="$PROJECT_DIR$/springboot-sso-oauth/springboot-sso-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-sso-oauth/springboot-sso-oauth.iml" filepath="$PROJECT_DIR$/springboot-sso-oauth/springboot-sso-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-sso-oauth/springcloud-sso-oauth.iml" filepath="$PROJECT_DIR$/springcloud-sso-oauth/springcloud-sso-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-sso-oauth/springcloud-sso-oauth.iml" filepath="$PROJECT_DIR$/springcloud-sso-oauth/springcloud-sso-oauth.iml" />
       <module fileurl="file://$PROJECT_DIR$/sso-oauth.iml" filepath="$PROJECT_DIR$/sso-oauth.iml" />
     </modules>
