@@ -276,6 +276,7 @@ redirect_uri：跳转uri，当授权码申请成功后会跳转到此地址，�
 ```
 localhost:9200/login
 ```
+![image](https://user-images.githubusercontent.com/40937248/128986084-2059ea01-1716-48f6-b125-c6609672498a.png)
 
 
 
@@ -295,9 +296,13 @@ http://localhost:9200/oauth/authorize?client_id=jy_sso_oauth&response_type=code&
 
 点击Authorize,接下来返回授权码： 认证服务携带授权码跳转redirect_uri,code=k45iLY就是返回的授权码, **每一个授权码只能使用一次**
 
+![image](https://user-images.githubusercontent.com/40937248/128985953-115b9028-dd1c-45ca-b921-04cdce2cc7e4.png)
+
+
 ```
 http://localhost/?code=BD0464
 ```
+![image](https://user-images.githubusercontent.com/40937248/128986015-f81d5c97-4bf0-4235-a418-4356b42b27e7.png)
 
 
 
@@ -333,6 +338,8 @@ basic:
 username: 客户端id
 
 password: 客户端密钥
+
+![image](https://user-images.githubusercontent.com/40937248/128986225-7cfb0654-f4f6-41fb-aad6-eb365f5c56b2.png)
 
 
 
@@ -383,6 +390,9 @@ username: 客户端id
 password: 客户端密钥
 
 使用接口测试测试如下:
+
+![image](https://user-images.githubusercontent.com/40937248/128986299-4e1043ef-721e-48a0-b032-2b126368a50b.png)
+
 
 ```
 {
@@ -439,6 +449,11 @@ username: 客户端id
 
 password: 客户端密钥
 
+![image](https://user-images.githubusercontent.com/40937248/128986365-676c1738-747b-4add-bdad-5f3a40b30ef3.png)
+
+![image](https://user-images.githubusercontent.com/40937248/128986406-570dda88-5d21-40d7-9965-e6fd4baf53e4.png)
+
+
 结果信息：
 
 ```
@@ -491,6 +506,7 @@ password: 客户端密钥
 ```
 http://localhost:9200/oauth/token?username=admin&password=admin&grant_type=password
 ```
+![image](https://user-images.githubusercontent.com/40937248/128986513-7bd77d00-e024-4c0e-ac36-8a6124d275bc.png)
 
 
 
@@ -500,6 +516,8 @@ http://localhost:9200/oauth/token?username=admin&password=admin&grant_type=passw
 
 ```
 http://localhost:9200/oauth/token?username=admin&password=admin&grant_type=password&client_id=jy_sso_oauth&client_secret=jy_sso_oauth
+
+![image](https://user-images.githubusercontent.com/40937248/128986557-7d6bfc0b-12db-4c36-9092-6c9202edd798.png)
 
 
 ```
@@ -533,7 +551,7 @@ token：令牌
 
 使用接口测试如下:
 
-同上
+![image](https://user-images.githubusercontent.com/40937248/128986667-2b118c68-c51b-423c-97e6-c7823af0216e.png)
 
 返回结果：
 
@@ -577,7 +595,10 @@ refresh_token：刷新令牌（注意不是access_token，而是refresh_token）
 
 
 
-同上
+![image](https://user-images.githubusercontent.com/40937248/128986728-5148d073-3985-4194-b1df-ca84b01ef2b7.png)
+
+![image](https://user-images.githubusercontent.com/40937248/128986771-5521c85b-fe45-48c4-ade9-e77e140bb77c.png)
+
 
 刷新令牌成功，会重新生成新的访问令牌和刷新令牌，令牌的有效期也比旧令牌长。 
 
