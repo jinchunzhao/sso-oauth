@@ -1,0 +1,67 @@
+server:
+  port: 10086
+  tomcat:
+    max-threads: 50
+
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://8.129.109.34:3306/sso-oauth?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimeZone=GMT%2B8
+    username: root
+    password: 123456
+    #配置初始化大小
+    initialSize: 1
+    #回收空闲连接时，将保证至少有minIdle个连接
+    minIdle: 1
+    #连接池中最多支持多少个活动会话
+    maxActive: 20
+    #程序向连接池中请求连接时,超过maxWait的值后，认为本次请求失败，即连接池
+    maxWait: 60000
+    ##要求程序从池中get到连接后, N 秒后必须close,否则druid 会强制回收该
+    #removeAbandoned: true
+    ##设置druid 强制回收连接的时限，当程序从池中get到连接开始算起，超过此值后，druid将强制回收该连接，单位秒。
+    #removeAbandonedTimeoutMillis: 60000
+    #池中某个连接的空闲时长达到 N 毫秒后, 连接池在下次检查空闲连接时，将回收该连接,要小于防火墙超时设置
+    minEvictableIdleTimeMillis: 120000
+    #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    ##当druid强制回收连接后，是否将stack trace 记录到日志中
+    #logAbandoned: true
+  jpa:
+    show-sql: true
+    session:
+      store-type: redis
+    redis:
+      host: 127.0.0.1
+      password:
+      port: 6379
+
+
+sso:
+  host: http://localhost
+  servlet:
+    path: /oauth/token
+  auth:
+    path: /oauth/token
+    url: ${sso.host}:${server.port}${sso.servlet.path}
+    ttl: 3600  #token存储到redis的过期时间
+    clientId: jy_sso_oauth
+    clientSecret: jy_sso_oauth
+    cookieDomain: localhost
+    cookieMaxAge: -1
+
+
+encrypt:
+  key-store:
+    location: classpath:/sso-oauth.jks
+    secret: sso-oauth
+    alias: sso-oauth
+    password: sso-oauth
+    public-key: public.key
+
+
+mconfig:
+  swagger-ui-open: true
+
