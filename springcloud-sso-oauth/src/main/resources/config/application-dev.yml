@@ -8,9 +8,9 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://8.129.109.34:3306/sso-oauth?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimeZone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/sso-oauth?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimeZone=GMT%2B8
     username: root
-    password: 123456
+    password: root
     #配置初始化大小
     initialSize: 1
     #回收空闲连接时，将保证至少有minIdle个连接
