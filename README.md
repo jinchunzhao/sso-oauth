@@ -12,7 +12,8 @@ sso单点登录案例，springboot 、springcloud 集成oauth2.0
 
 本项目采用 Spring security + Oauth2完成用户认证及用户授权，Spring security 是一个强大的和高度可定制的身份验证和访问控制框架，Spring security 框架集成了Oauth2协议。
 
-![image-20210811101938476](C:\Users\jinchunzhao\AppData\Roaming\Typora\typora-user-images\image-20210811101938476.png)
+![image](https://user-images.githubusercontent.com/40937248/128985701-86a60408-0fbd-44d7-ba29-41a966be04d7.png)
+
 
 1、用户请求认证服务完成认证。 
 
